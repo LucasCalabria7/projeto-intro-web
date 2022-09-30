@@ -5,6 +5,8 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Outfit:wght@500&family=Poppins:ital,wght@1,200&display=swap');
 
+
+
 header {
     display: flex;
     justify-content: center;
@@ -14,7 +16,16 @@ header {
     font-family: 'Oswald', sans-serif;
     border-bottom: 2vh groove rgb(222, 222, 222);
     padding: auto;
+    margin-top: 4vh;
     color: rgb(241, 241, 241);
+}
+
+#bighead {
+    display: flex;
+    height: 10rem;
+    width: 10rem;
+    margin: 0 auto;
+    padding-bottom: 2vh;
 }
 
 body {
@@ -29,11 +40,12 @@ main {
     color: black;
     text-align: center;
     font-size: 2vh;
+    
 }
 
 .container {
     display: grid;
-    grid-template-rows: 20vh 1fr 5vh;
+    grid-template-rows: 30vh 1fr 5vh;
 }
 
 .titulo-main {
