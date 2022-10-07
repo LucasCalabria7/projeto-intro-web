@@ -8,7 +8,8 @@ let tenis1 = {
     marca: "Nike",
     tamanho: [38, 39, 40, 41, 42, 43, 44],
     temEstoque: true,
-    preco: 950
+    preco: 1000,
+    html: document.getElementById("airforce")
 };
 
 let tenis2 = {
@@ -16,8 +17,9 @@ let tenis2 = {
     cor : ["Branco", "Vermelho", "Preto"],    
     marca : "Nike",
     tamanho : [38, 39, 40, 41, 42, 43, 44],
-    temEstoque : false,
-    preco : 1300
+    temEstoque : true,
+    preco : 2000,
+    html: document.getElementById("jordan1")
 };
 
 let tenis3 = {
@@ -26,7 +28,8 @@ let tenis3 = {
     marca : "Nike",
     tamanho : [38, 39, 40, 41, 42, 43, 44],
     temEstoque : true,
-    preco : 1000
+    preco : 1200,
+    html: document.getElementById("dunk")
 };
 
 let tenis4 = {
@@ -35,7 +38,8 @@ let tenis4 = {
     marca : "Adidas",
     tamanho : [38, 39, 40, 41, 42, 43, 44],
     temEstoque : true,
-    preco : 1350
+    preco : 1500,
+    html: document.getElementById("yeezy")
 };
 
 let meusObjetos = [];               //Adicionando objetos ao array verificando booleanos
@@ -64,25 +68,42 @@ if(tenis4.temEstoque){
     alert(`O produto ${tenis4.nome} está em falta no estoque!`)
 };
 
-//Retirando média de preço dos produtos para colocá-lo em função posteriores
+function calcularMedia () {
+    let numshoes = meusObjetos.length;
+    let soma = 0;
+
+    for(let elementos of meusObjetos) {
+        soma += elementos.preco
+    }
+    return soma / numshoes
+}
+console.log("A média de preço entre os produtos é", calcularMedia());
 
 function relatorioObjeto (arrayObjeto) {
     for(i in arrayObjeto) {
         console.log(`Produto ${Number(i)+1} :`, arrayObjeto[i]);
     }
 }
-console.log(`Você tem ${meusObjetos.length} produtos em estoque, são eles:`)
-relatorioObjeto(meusObjetos);                      //Atualizando Relatório dos produtos
+console.log(`Você tem ${meusObjetos.length} produtos em estoque, segue o relatório dos mesmos:`)
+relatorioObjeto(meusObjetos); //Atualizando Relatório dos produtos
+
 
 
 function buscarItens (arrayObj, string) {
+    let busca = document.getElementById("nome");
+    string = busca.value
+
+    let container = document.getElementById("middle-container");
+
+    if(!string) {
+        return alert("Faça uma busca valida")
+    }
+
     for(objeto of arrayObj){
         if(objeto.nome === string){
-            return objeto
+            return container.innerHTML = objeto.html.innerHTML
         }
     }
     return alert(`Seu produto ${string} não foi encontrado!`)
-}
-console.log("Você buscou por:", buscarItens(meusObjetos, "Yeezy Boost 350"));
-console.log("Você buscou por:", buscarItens(meusObjetos, "Tenis daora"));    
+} 
 //Buscando itens através de função.
