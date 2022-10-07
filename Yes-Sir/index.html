@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yes, sir! - Shoe Store</title>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
 </head>
 <body>
@@ -25,13 +25,13 @@
             <form id="input-busca">
                 <label id="label-nome" for="nome">Busca</label>
                 <input type="text" id="nome" name="nome" placeholder="Search">
-                <button id="busca"type="submit">🔎</button>
+                <button id="busca"type="button" onclick="buscarItens(meusObjetos, busca)">🔎</button>
             </form>
         </section>
 
-        <section>
+        <section id="middle-container">
 
-            <section class="shoes-sustitle">
+            <section id="airforce" class="shoes-sustitle">
                 <img class="my-shoes" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAP00IdyMc85D8OTvFQZDi8tk062HX3gmnuQ&usqp=CAU">
 
                 <ul>
@@ -44,7 +44,7 @@
                 </ul>
             </section>
 
-            <section class="shoes-sustitle">
+            <section id="jordan1" class="shoes-sustitle">
                 <img class="my-shoes" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU4QFdDkSAS72ldVBP3BYX5MBczABmGbWSaA&usqp=CAU">
 
                 <ul>
@@ -57,7 +57,7 @@
                 </ul>
             </section>
 
-            <section class="shoes-sustitle">
+            <section id="dunk" class="shoes-sustitle">
                 <img class="my-shoes" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoBZeJ85sqn5Ah7vCzqFXvu03RGeFjwc0lEg&usqp=CAU">
                 
                 <ul>
@@ -70,11 +70,12 @@
                 </ul>
             </section>
 
-            <section class="shoes-sustitle">
+            <section id="yeezy" class="shoes-sustitle">
                 <img class="my-shoes" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmyhC_NWS1I-Fwj-9IhRLSlY2_sIiRoGdmXw&usqp=CAU">
                 
                 <ul>
-                    <li>Nome: <a href="https://www.farfetch.com/br/shopping/men/adidas-yeezy-tenis-yeezy-boost-350-v2-triple-white-item-12960328.aspx">Yeezy Boost 350</a></li>
+                    <li>Nome: <a href="https://www.farfetch.com/br/shopping/men/adidas-yeezy-tenis-yeezy-boost-350-v2-triple-white-item-12960328.aspx">
+                        Yeezy Boost 350</a></li>
                     <li>Cor: Branco</li>
                     <li>Marca : Adidas</li>
                     <li>Tamanho : 38, 39, 40, 41, 42, 43, 44</li>
